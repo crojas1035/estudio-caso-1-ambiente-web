@@ -1,0 +1,121 @@
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mi Registro Académico</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+    <header>
+        <div class="encabezado">
+            <h1>Mi Registro Académico</h1>
+            <p>Portal de gestión estudiantil</p>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="bienvenida">
+            <p>GESTIÓN ACADÉMICA</p>
+            <h2>Cada nota cuenta.</h2>
+            <p>
+                Organizá, registrá y consultá el rendimiento
+                académico de tus estudiantes en un solo lugar.
+            </p>
+        </section>
+
+        <div class="contenido">
+
+            <section id="registro">
+                <h2>Nuevo estudiante</h2>
+                <p class="descripcion">
+                    Completá los datos para realizar un nuevo registro.
+                </p>
+
+                <form id="formulario">
+
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre">
+                    <br>
+
+                    <label for="apellidos">Apellidos:</label>
+                    <input type="text" id="apellidos">
+                    <br>
+
+                    <label for="nota">Nota:</label>
+                    <input type="number" id="nota" min="0" max="100">
+                    <br>
+
+                    <button type="button" onclick="agregarEstudiante()">
+                        Agregar estudiante
+                    </button>
+
+                </form>
+
+                <p id="mensaje"></p>
+            </section>
+
+            <section id="resumen">
+                <h2>Resumen académico</h2>
+                <p class="descripcion">
+                    Estadísticas generales del grupo.
+                </p>
+
+                <div class="estadisticas">
+                    <p id="mayorNota"></p>
+                    <p id="promedio"></p>
+                    <p id="menorNota"></p>
+                </div>
+            </section>
+
+        </div>
+
+        <section id="lista">
+            <h2>Directorio de estudiantes</h2>
+            <p class="descripcion">
+                Consultá las notas de los estudiantes registrados.
+            </p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Apellidos</th>
+                        <th>Nota</th>
+                    </tr>
+                </thead>
+
+                <tbody id="tablaEstudiantes">
+                    <tr>
+                        <td>Maria</td>
+                        <td>Mora Perez</td>
+                        <td>90</td>
+                    </tr>
+                    <tr>
+                        <td>Pedro</td>
+                        <td>Sibaja Lopez</td>
+                        <td>60</td>
+                    </tr>
+                    <tr>
+                        <td>Marco</td>
+                        <td>Rojas Castro</td>
+                        <td>78</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Mi Registro Académico | Ambiente Web Cliente Servidor</p>
+        <p>Estudio de Caso 1 - 2026</p>
+    </footer>
+
+    <script src="codigo.js"></script>
+
+</body>
+</html>
